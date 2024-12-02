@@ -4,7 +4,7 @@ public class Lista_Ligada<T> {
   // vazia ✔
   // extensao ✔
   // adicionar ✔
-  // adicionar
+  // adicionar ✔
   // obter
   // extrair
   // procurar
@@ -74,6 +74,11 @@ public class Lista_Ligada<T> {
 
     }
 
+  }
+
+  public T obter(int posicao) {
+    this.posicaoValida(posicao);
+    return this.pegarElemento(posicao).getDado();
   }
 
   public void extrair(int posicao) {
