@@ -8,10 +8,10 @@ public class ListaLigada<T> {
   // vazia ✔
   // extensao ✔
   // adicionar ✔
-  // adicionar
-  // obter
-  // extrair
-  // procurar
+  // adicionar✔
+  // obter✔
+  // extrair✔
+  // procurar✔
 
   public boolean vazia() {
     return tamanho <= 0 ? true : false;
@@ -44,7 +44,7 @@ public class ListaLigada<T> {
   }
 
   private void posicaoValida(int posicao) {
-    if (posicao < 0 || posicao > tamanho) {
+    if (posicao < 0 || posicao >= tamanho) {
       throw new IllegalArgumentException("Posicao Invalida!");
     }
   }
@@ -74,6 +74,47 @@ public class ListaLigada<T> {
       tamanho++;
     }
 
+  }
+
+  public T obter(int posicao) {
+    this.posicaoValida(posicao);
+
+    return pegarElemento(posicao).getDado();
+  }
+
+  public int procurar(T dado) {
+    No<T> atual = this.cabeca;
+    int posicao = 0;
+
+    while (atual != null) {
+      if (atual.getDado().equals(dado)) {
+        return posicao;
+      }
+      posicao++;
+      atual = atual.getProximo();
+    }
+
+    return -1;
+  }
+
+  public void extrair(int posicao) {
+    this.posicaoValida(posicao);
+
+    if (posicao == 0) {
+      this.cabeca = this.cabeca.getProximo();
+
+      if (tamanho == 1) {
+        this.fundo = null;
+      }
+    } else {
+
+      No<T> anterior = pegarElemento(posicao - 1);
+      No<T> atual = anterior.getProximo();
+      No<T> proximo = atual.getProximo();
+
+      anterior.setProximo(proximo);
+    }
+    this.tamanho--;
   }
 
   public void show() {
