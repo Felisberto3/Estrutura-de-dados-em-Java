@@ -1,13 +1,6 @@
 package Lista_Duplamente_Ligada;
 
 public class Lista_Ligada<T> {
-  // vazia ✔
-  // extensao ✔
-  // adicionar ✔
-  // adicionar ✔
-  // obter
-  // extrair
-  // procurar
 
   private NoD<T> cabeca;
   private NoD<T> fundo;
@@ -51,26 +44,26 @@ public class Lista_Ligada<T> {
   }
 
   public void adicionar(T dado, int posicao) {
-    if (posicao == 0) {
-      NoD<T> novNoD = new NoD<T>(dado, null, cabeca);
-      this.cabeca = novNoD;
 
-      if (tamanho == 0) {
-        this.fundo = novNoD;
-      } else {
-        this.cabeca.setAnterior(novNoD);
-      }
-      tamanho++;
-
-    } else if (posicao == tamanho) {
+    if (posicao == tamanho) {
       this.adicionar(dado);
+    } else if (posicao == 0) {
+      NoD<T> novo = new NoD<T>(dado, null, cabeca);
+      if (tamanho > 0) {
+        this.cabeca.setAnterior(novo);
+      }
+      this.cabeca = novo;
+      this.tamanho++;
     } else {
       this.posicaoValida(posicao);
+
       NoD<T> anterior = this.pegarElemento(posicao - 1);
-      NoD<T> atual = anterior.getSeguinte();
-      NoD<T> novoNoD = new NoD<T>(dado, anterior, atual);
-      anterior.setSeguinte(novoNoD);
-      tamanho++;
+      NoD<T> seguinte = anterior.getSeguinte();
+
+      NoD<T> novo = new NoD<T>(dado, anterior, seguinte);
+
+      anterior.setSeguinte(novo);
+      this.tamanho++;
 
     }
 
@@ -81,16 +74,38 @@ public class Lista_Ligada<T> {
     return this.pegarElemento(posicao).getDado();
   }
 
+  public int procurar(T dado) {
+    NoD<T> atual = this.cabeca;
+    int posicao = 0;
+    while (atual != null) {
+      if (atual.getDado().equals(dado)) {
+        return posicao;
+      }
+      atual = atual.getSeguinte();
+      posicao++;
+    }
+
+    return -1;
+  }
+
   public void extrair(int posicao) {
 
-    this.posicaoValida(posicao);
+    if (posicao == 0) {
+      this.cabeca.setAnterior(null);
+      this.cabeca = this.cabeca.getSeguinte();
+    } else {
+      this.posicaoValida(posicao);
 
-    NoD<T> noParaEliminar = this.pegarElemento(posicao);
+      NoD<T> noParaEliminar = this.pegarElemento(posicao);
 
-    NoD<T> anterior = noParaEliminar.getAnterior();
-    NoD<T> posterior = noParaEliminar.getSeguinte();
+      NoD<T> anterior = noParaEliminar.getAnterior();
+      NoD<T> posterior = noParaEliminar.getSeguinte();
 
-    anterior.setSeguinte(posterior);
+      anterior.setSeguinte(posterior);
+      if (posicao != tamanho - 1) {
+        posterior.setAnterior(anterior);
+      }
+    }
 
     tamanho--;
   }
