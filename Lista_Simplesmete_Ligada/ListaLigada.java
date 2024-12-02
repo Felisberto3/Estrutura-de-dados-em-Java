@@ -5,13 +5,6 @@ public class ListaLigada<T> {
   private No<T> cabeca;
   private No<T> fundo;
   private int tamanho = 0;
-  // vazia ✔
-  // extensao ✔
-  // adicionar ✔
-  // adicionar✔
-  // obter✔
-  // extrair✔
-  // procurar✔
 
   public boolean vazia() {
     return tamanho <= 0 ? true : false;

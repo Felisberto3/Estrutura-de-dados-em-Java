@@ -9,7 +9,10 @@
 
 ### .Cada nó consistindo em um elemento da lista e um ponteiro para o próximo nó da lista.
 
-
+  ![alt text](<Static/No.java - Lista_Ligada - Visual Studio Code 02_12_2024 13_39_56.png>)
+  ![alt text](<Static/No.java - Lista_Ligada - Visual Studio Code 02_12_2024 13_41_34.png>)
+  ![alt text](<Static/No.java - Lista_Ligada - Visual Studio Code 02_12_2024 13_40_55.png>) 
+  ![alt text](<Static/No.java - Lista_Ligada - Visual Studio Code 02_12_2024 13_40_44.png>)
 # Vantagens
 
   Vetores (listas implementadas com array) são uma excelente alternativa ao uso direto de arrays em Java,
