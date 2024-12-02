@@ -33,6 +33,49 @@ public class ListaLigada<T> {
     this.tamanho++;
   }
 
+  private No<T> pegarElemento(int posicao) {
+    No<T> atual = this.cabeca;
+
+    for (int i = 0; i < posicao; i++) {
+      atual = atual.getProximo();
+    }
+
+    return atual;
+  }
+
+  private void posicaoValida(int posicao) {
+    if (posicao < 0 || posicao > tamanho) {
+      throw new IllegalArgumentException("Posicao Invalida!");
+    }
+  }
+
+  public void adicionar(T dado, int posicao) {
+    No<T> novoNo = new No<T>(dado, cabeca);
+    if (posicao == 0) {
+      this.cabeca = novoNo;
+
+      if (tamanho == 0) {
+        fundo = novoNo;
+      }
+
+      tamanho++;
+
+    } else if (posicao == tamanho) {
+      this.adicionar(dado);
+
+    } else {
+      this.posicaoValida(posicao);
+
+      No<T> anterior = pegarElemento(posicao - 1);
+      No<T> atual = anterior.getProximo();
+      No<T> proximoNo = new No<T>(dado, atual);
+
+      anterior.setProximo(proximoNo);
+      tamanho++;
+    }
+
+  }
+
   public void show() {
 
     if (tamanho == 0) {
