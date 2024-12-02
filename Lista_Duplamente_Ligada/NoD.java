@@ -40,6 +40,11 @@ public class NoD<T> {
     this.seguinte = seguinte;
   }
 
+  @Override
+  public String toString() {
+    return "NoD [dado=" + dado + ", anterior=" + anterior + ", seguinte=" + seguinte + "]";
+  }
+
   // resumo de humanidade
   // Estudar fortemente Probabilidade e Estatistica
   // Resolver o meu pendente de Lista Duplamente Ligada
