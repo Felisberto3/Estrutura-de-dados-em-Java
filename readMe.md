@@ -11,8 +11,7 @@
 ### .É o elemento básico da estrutura de dados. 
 
 ### .Cada nó consistindo em um elemento da lista e um ponteiro para o próximo nó da lista.
-![alt text](Static/image-00.png)
-![alt text](Static/image-01.png)
+
 
 # Métodos desenvolvidos neste repositório
 ## vazia ✔
@@ -48,8 +47,6 @@ um aluno na primeira posição seja computacionalmente efciente
   
   ![alt text](Static/image-Lista_Duplamente_Ligada.png)
 
-  ![alt text](Static/image-05.png)
-  ![alt text](Static/image-06.png)
   Para o método que remove o elemento do m da Lista ter consumo de tempo constante, a última célula
 deve se referir a penúltima. Isso é possível se utilizarmos o esquema de Lista Duplamente Ligada, no qual as
 células possuem referências tanto para a próxima e quanto para a célula anterior.
