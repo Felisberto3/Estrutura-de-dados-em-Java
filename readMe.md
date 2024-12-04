@@ -44,7 +44,7 @@ um aluno na primeira posição seja computacionalmente efciente
 
 
 # Lista Duplamente Ligada
-    Uma lista duplamente ligada é uma lista ligada na qual a cada nó contém dentro de si a referência ao elemento seguinte e ao elemento anterior.
+  Uma lista duplamente ligada é uma lista ligada na qual a cada nó contém dentro de si a referência ao elemento seguinte e ao elemento anterior.
   
   ![alt text](Static/image-Lista_Duplamente_Ligada.png)
 
