@@ -19,21 +19,20 @@ public class Pilhas<T> {
     this.tamanho++;
   }
 
-  private void posicaoValida(int posicao) {
-
-    if (posicao < 0 || posicao >= tamanho) {
-      throw new IllegalArgumentException("Posicao Invalida");
-    }
-  }
-
-  private No<T> getElement(int index) {
-    No<T> actual = this.inicio;
-
-    for (int i = 0; i < index; i++) {
-      actual = actual.getProximo();
+  public T pop() {
+    if (tamanho <= 0) {
+      return null;
     }
 
-    return actual;
+    No<T> atual = this.topo;
+
+    if (tamanho != 1) {
+      this.topo = atual.getAnterior();
+      this.topo.setProximo(null);
+    }
+
+    this.tamanho--;
+    return atual.getDado();
   }
 
   public T top() {
@@ -42,6 +41,10 @@ public class Pilhas<T> {
     }
     return null;
 
+  }
+
+  public boolean empty() {
+    return tamanho > 0 ? false : true;
   }
 
   public void show() {

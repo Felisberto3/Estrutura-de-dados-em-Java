@@ -41,7 +41,7 @@ public class No<T> {
 
   @Override
   public String toString() {
-    return "No [dado=" + dado + ", proximo=" + proximo + "]";
+    return "No [dado=" + dado + ", anterior=" + anterior + ", proximo=" + proximo + "]";
   }
 
 }
