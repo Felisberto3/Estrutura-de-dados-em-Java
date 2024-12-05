@@ -8,6 +8,7 @@ public class Testing {
     // a.push(2);
     // a.push(3);
     // a.push(4);
+    System.out.println(a.top());
     a.show();
     System.out.println(a.toString());
   }

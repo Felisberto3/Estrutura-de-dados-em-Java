@@ -37,7 +37,11 @@ public class Pilhas<T> {
   }
 
   public T top() {
-    return topo.getDado();
+    if (tamanho > 0) {
+      return topo.getDado();
+    }
+    return null;
+
   }
 
   public void show() {
