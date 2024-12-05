@@ -57,3 +57,15 @@
     A diferença entre uma lista simplesmente ligada e uma duplamente ligada é que a primeira usa nós simplesmente ligados (informação + referência ao seguinte)  e a segunda usa nós duplamente ligados (informação + eferência ao seguinte +   referência ao anterior)
 # Pilhas com Ponteiros(Lista Ligada)
     Implementar o TDA Pilha e o TDA Fila fazendo uso de ponteiros
+
+## Pilha: 
+  Colecção onde os elementos se adicionan e extraem por um mesmo extremo, chamado topo.
+  Conjunto de elementos que cumprem com a seguinte característica:
+             O último elemento colocado na pilha, é o primeiro
+             a saír desta.
+                             (LIFO= Last In First Out).
+### TDA Pilha. Operações básicas
+  top: Retorna o elemento no topo da pilha.
+  pop: Exclui o elemento no topo da pilha. 
+  push: adiciona um elemento no topo da pilha. O antigo elemento no topo torna-se próximo ao topo e assim por diante.
+  empty: Retorna verdadeiro se a pilha for vazia; falso caso contrário.
