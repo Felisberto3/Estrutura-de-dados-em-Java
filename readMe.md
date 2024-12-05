@@ -61,11 +61,33 @@
 ## Pilha: 
   Colecção onde os elementos se adicionan e extraem por um mesmo extremo, chamado topo.
   Conjunto de elementos que cumprem com a seguinte característica:
-             O último elemento colocado na pilha, é o primeiro
-             a saír desta.
-                             (LIFO= Last In First Out).
+  O último elemento colocado na pilha, é o primeiro
+  a saír desta.
+                  (LIFO= Last In First Out).
+
+
+![alt text](Static/image-1-Pilhas.png)
 ### TDA Pilha. Operações básicas
   top: Retorna o elemento no topo da pilha.
   pop: Exclui o elemento no topo da pilha. 
   push: adiciona um elemento no topo da pilha. O antigo elemento no topo torna-se próximo ao topo e assim por diante.
   empty: Retorna verdadeiro se a pilha for vazia; falso caso contrário.
+
+## Filas:
+
+### Fila: 
+  colecção de elementos onde estes são adicionados no final (fundo)  e extraído pelo início (frente).
+  
+  Conjunto de elementos que cumprem com a seguinte característica:
+  O primeiro elemento colocado na fila, é o primeiro
+  em sair desta. 
+                  (FIFO= Fist In First Out).
+  
+### Fila Fila:
+  ![alt text](Static/image-Fila.png)
+
+### Fila do Banco:
+  ![alt text](Static/image-1-Fila.png)
+
+### Fila do Mercado ou da Loja:
+  ![alt text](Static/image-2-Fila.png)
