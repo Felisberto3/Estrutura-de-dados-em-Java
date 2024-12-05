@@ -66,9 +66,4 @@ public class Pilhas<T> {
     System.out.println(builder.toString());
   }
 
-  @Override
-  public String toString() {
-    return "Pilhas [inicio=" + inicio + ", topo=" + topo + ", tamanho=" + tamanho + "]";
-  }
-
 }
