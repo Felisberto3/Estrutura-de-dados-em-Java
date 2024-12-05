@@ -19,6 +19,13 @@ public class Filas<T> {
     this.tamanho++;
   }
 
+  public T frente() {
+    if (tamanho <= 0) {
+      return null;
+    }
+    return this.cabeca.getDado();
+  }
+
   public void show() {
     if (tamanho == 0) {
       System.out.println("[]");
