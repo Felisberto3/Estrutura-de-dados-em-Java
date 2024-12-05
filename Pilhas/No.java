@@ -3,6 +3,7 @@ package Pilhas;
 public class No<T> {
 
   private T dado;
+  private No<T> anterior;
   private No<T> proximo;
 
   public No(T dado) {
@@ -28,6 +29,14 @@ public class No<T> {
 
   public void setProximo(No<T> proximo) {
     this.proximo = proximo;
+  }
+
+  public No<T> getAnterior() {
+    return anterior;
+  }
+
+  public void setAnterior(No<T> anterior) {
+    this.anterior = anterior;
   }
 
   @Override
