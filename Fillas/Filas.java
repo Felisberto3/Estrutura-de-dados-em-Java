@@ -26,6 +26,26 @@ public class Filas<T> {
     return this.cabeca.getDado();
   }
 
+  public T extrair() {
+    if (tamanho == 0) {
+      return null;
+    }
+
+    No<T> atual = this.cabeca;
+
+    this.cabeca = this.cabeca.getProximo();
+    if (tamanho != 1) {
+      this.cabeca.setAnterior(null);
+    }
+
+    this.tamanho--;
+    return atual.getDado();
+  }
+
+  public boolean empty() {
+    return tamanho > 0 ? false : true;
+  }
+
   public void show() {
     if (tamanho == 0) {
       System.out.println("[]");
